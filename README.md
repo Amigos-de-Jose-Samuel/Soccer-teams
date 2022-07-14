@@ -1,4 +1,4 @@
-# Jogo da Capital
+# Soccer teams
 
 ## Correções de ambiente
 Dependendo do sistema operacional utilizado (Windows ou Linux), é necessário realizar as seguintes correções nos arquivos:
