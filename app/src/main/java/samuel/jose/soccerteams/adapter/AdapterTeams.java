@@ -31,7 +31,7 @@ public class AdapterTeams extends RecyclerView.Adapter<AdapterTeams.MyViewHolder
             name = view.findViewById(R.id.textViewName);
             city = view.findViewById(R.id.textViewCity);
             state = view.findViewById(R.id.textViewState);
-            img = view.findViewById(R.id.imageViewHero);
+            img = view.findViewById(R.id.imageViewTeam);
         }
     }
 
