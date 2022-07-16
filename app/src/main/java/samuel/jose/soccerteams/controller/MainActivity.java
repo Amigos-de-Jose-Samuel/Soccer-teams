@@ -5,15 +5,19 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import samuel.jose.soccerteams.DetailActivity;
 import samuel.jose.soccerteams.R;
 import samuel.jose.soccerteams.RecyclerItemClickListener;
 import samuel.jose.soccerteams.adapter.AdapterTeams;
@@ -27,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Context context = this;
 
         recyclerViewTeams = findViewById(R.id.recyclerViewTeams);
 
@@ -46,7 +52,10 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onItemClick(View view, int position) {
                                 SoccerTeam obj = listTeams.get(position);
-                                // Go to details page
+
+                                Intent it = new Intent(context, DetailActivity.class);
+                                it.putExtra("team", (Serializable)listTeams.get(position));
+                                startActivity(it);
                             }
 
                             @Override
