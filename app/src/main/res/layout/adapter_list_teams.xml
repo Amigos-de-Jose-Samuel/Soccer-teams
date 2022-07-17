@@ -9,15 +9,16 @@
 
     <ImageView
         android:id="@+id/imageViewTeam"
-        android:layout_width="240dp"
+        android:layout_width="200dp"
         android:layout_height="120dp"
+        android:layout_gravity="left"
         android:layout_weight="1"
         android:baselineAlignBottom="false"
-        android:maxWidth="80dp"
+        android:maxWidth="200dp"
         android:maxHeight="120dp"
-        android:minWidth="80dp"
+        android:minWidth="200dp"
         android:minHeight="120dp"
-        android:textAlignment="viewStart"
+        android:textAlignment="textStart"
         tools:srcCompat="@tools:sample/avatars" />
 
     <LinearLayout

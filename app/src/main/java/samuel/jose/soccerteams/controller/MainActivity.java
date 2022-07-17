@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
@@ -54,7 +55,12 @@ public class MainActivity extends AppCompatActivity {
                                 SoccerTeam obj = listTeams.get(position);
 
                                 Intent it = new Intent(context, DetailActivity.class);
-                                it.putExtra("team", (Serializable)listTeams.get(position));
+                                //it.putExtra("team", (Serializable) listTeams.get(position));
+                                it.putExtra("nome", obj.getName());
+                                it.putExtra("image", obj.getImg());
+                                it.putExtra("cidade", obj.getCity());
+                                it.putExtra("historia", obj.getHistory());
+                                it.putExtra("estado", obj.getState());
                                 startActivity(it);
                             }
 
